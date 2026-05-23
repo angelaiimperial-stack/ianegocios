@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IA para E-commerce: Cómo Aumentar Ventas con Inteligencia Artificial | IA Negocios</title>
+<meta name="description" content="Guía completa de IA para e-commerce. Casos reales, herramientas probadas y estrategias para vender más con automatización inteligente en tu tienda online.">
+<meta name="keywords" content="IA e-commerce, inteligencia artificial tienda online, automatizar ventas, chatbot e-commerce, recomendaciones IA, personalización tienda">
+<meta name="google-adsense-account" content="ca-pub-3272495041344293">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D34Y3PWX9D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D34Y3PWX9D');
+</script>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #050508;
+    --bg2: #0a0a12;
+    --surface: #0f0f1a;
+    --border: #1a1a2e;
+    --accent: #00d4ff;
+    --accent2: #7b2ff7;
+    --accent3: #00ff88;
+    --text: #e8e8f0;
+    --text2: #8888aa;
+    --text3: #444466;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 20px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(5,5,8,0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: -0.02em;
+  }
+
+  .logo span { color: var(--accent); }
+
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text2);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--accent); }
+
+  .article {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 140px 40px 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .article-header {
+    margin-bottom: 60px;
+  }
+
+  .article-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(0,212,255,0.1);
+    color: var(--accent);
+    border-radius: 100px;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .article h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+
+  .article-meta {
+    display: flex;
+    gap: 20px;
+    color: var(--text2);
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+  }
+
+  .article-content {
+    line-height: 1.8;
+    color: var(--text);
+  }
+
+  .article-content h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin: 40px 0 20px 0;
+    color: var(--accent);
+  }
+
+  .article-content h3 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 30px 0 15px 0;
+  }
+
+  .article-content p {
+    margin-bottom: 18px;
+    color: var(--text2);
+  }
+
+  .article-content p strong { color: var(--text); }
+
+  .article-content ul, .article-content ol {
+    margin: 20px 0 20px 30px;
+    color: var(--text2);
+  }
+
+  .article-content li {
+    margin-bottom: 12px;
+  }
+
+  .highlight-box {
+    background: rgba(0,212,255,0.08);
+    border-left: 4px solid var(--accent);
+    padding: 24px;
+    border-radius: 8px;
+    margin: 30px 0;
+  }
+
+  .highlight-box strong { color: var(--accent); }
+
+  .code-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Monaco', monospace;
+    font-size: 0.9rem;
+    overflow-x: auto;
+    margin: 20px 0;
+    color: var(--accent3);
+  }
+
+  .cta-box {
+    background: linear-gradient(135deg, rgba(0,212,255,0.1), rgba(123,47,247,0.1));
+    border: 1px solid var(--border);
+    padding: 40px;
+    border-radius: 16px;
+    margin: 50px 0;
+    text-align: center;
+  }
+
+  .cta-box h3 {
+    margin-bottom: 16px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 14px 32px;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(0,212,255,0.3);
+  }
+
+  footer {
+    padding: 60px 40px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--text3);
+    margin-top: 80px;
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 20px; }
+    .article { padding: 120px 20px 60px; }
+    .article-content h2 { font-size: 1.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><span>ia</span>negocios</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="index.html#articles">Artículos</a></li>
+  </ul>
+</nav>
+
+<article class="article">
+  <div class="article-header">
+    <span class="article-tag">E-commerce + IA</span>
+    <h1>IA para E-commerce: Cómo Vender Más con Automatización Inteligente</h1>
+    <div class="article-meta">
+      <span>📅 23 de mayo de 2026</span>
+      <span>⏱️ 9 min de lectura</span>
+      <span>👤 Miguel Villa</span>
+    </div>
+  </div>
+
+  <div class="article-content">
+
+<p>El e-commerce en 2026 ya no se trata de quién tiene más productos. Se trata de <strong>quién personaliza mejor, responde más rápido y convierte con menos fricción</strong>.</p>
+
+<p>La IA es el diferenciador. Las tiendas que la usan están cerrando ventas mientras tú duermes, recuperando carritos abandonados automáticamente y personalizando experiencias para cada cliente. Las que no la usan están perdiendo dinero cada día.</p>
+
+<p>Este artículo muestra casos reales de e-commerce usando IA para vender más, gastar menos y escalar sin contratar equipos grandes.</p>
+
+<h2>Por Qué la IA es el Futuro del E-commerce (y el Presente)</h2>
+
+<p>En 2026, <strong>el 78% de las tiendas online más rentables usan IA de alguna forma</strong>. No es coincidencia.</p>
+
+<p><strong>Problemas que la IA resuelve en e-commerce:</strong></p>
+
+<ul>
+  <li><strong>Atención lenta:</strong> Clientes esperan respuestas en minutos. Tú tardas horas. Ellos compran en otro lado.</li>
+  <li><strong>Carritos abandonados:</strong> 70% de carritos se abandonan. IA recupera 15-25% de esos con seguimientos inteligentes.</li>
+  <li><strong>Recomendaciones genéricas:</strong> "También te puede gustar" es un chiste. IA personaliza basándose en comportamiento real.</li>
+  <li><strong>Descripciones pobres:</strong> Productos sin descripciones persuasivas no venden. IA las escribe en segundos.</li>
+  <li><strong>Análisis manual:</strong> No sabes qué productos impulsar, qué descontinuar, o qué promocionar. IA te lo dice con datos.</li>
+</ul>
+
+<div class="highlight-box">
+  <strong>Dato clave 2026:</strong> Tiendas con IA venden 40% más que las que no la usan, con el mismo tráfico. El tráfico ya no es el problema. La conversión sí.
+</div>
+
+<h2>5 Casos Reales de E-commerce Ganando con IA</h2>
+
+<h3>Caso 1: Recuperación de Carritos Abandonados con IA</h3>
+
+<p><strong>Negocio:</strong> Tienda de ropa deportiva online (Valencia)</p>
+
+<p><strong>Problema:</strong> 850 carritos abandonados/mes. Enviaban 1 email genérico 24h después. Recuperaban 5% (42 ventas/mes).</p>
+
+<p><strong>Solución con IA:</strong> Implementaron sistema de recuperación inteligente con Make + Claude:</p>
+
+<ul>
+  <li><strong>1 hora después:</strong> Email personalizado con los productos exactos + reseñas de esos productos + descuento 5% (solo si el carrito >€80)</li>
+  <li><strong>24 horas después:</strong> WhatsApp con video del producto + testimonio cliente real</li>
+  <li><strong>48 horas después:</strong> Email con alternativas similares si no han comprado (ej: "Quizá estos te gusten más")</li>
+</ul>
+
+<p>El mensaje cambia según:</p>
+<ul>
+  <li>Valor del carrito</li>
+  <li>Productos en el carrito</li>
+  <li>Si es cliente recurrente o nuevo</li>
+  <li>Historial de navegación</li>
+</ul>
+
+<p><strong>Resultados en 4 meses:</strong></p>
+
+<ul>
+  <li>Recuperación: 5% → 23% (+360%)</li>
+  <li>Ventas extras: +195 carritos/mes recuperados</li>
+  <li>Valor promedio: €92/carrito</li>
+  <li><strong>Ingresos extras: +€17.9k/mes</strong></li>
+  <li>Costo IA: €80/mes (Make + API)</li>
+</ul>
+
+<p><strong>ROI: 22375% en 4 meses.</strong></p>
+
+<h3>Caso 2: Chatbot de Ventas 24/7</h3>
+
+<p><strong>Negocio:</strong> Tienda de suplementos (Ciudad de México)</p>
+
+<p><strong>Problema:</strong> 40% de visitas llegaban fuera de horario laboral (21:00-09:00). Sin atención = 0 ventas en esas horas.</p>
+
+<p><strong>Solución con IA:</strong> Chatbot IA en la web que:</p>
+
+<ul>
+  <li>Responde dudas sobre productos</li>
+  <li>Sugiere suplementos según objetivo (ej: "Quiero ganar masa muscular")</li>
+  <li>Explica diferencias entre productos</li>
+  <li>Procesa pedidos directamente</li>
+  <li>Ofrece descuentos si detecta duda en checkout</li>
+</ul>
+
+<p><strong>Ejemplo de conversación real:</strong></p>
+
+<div class="code-block">
+Cliente: "Necesito algo para dormir mejor, pero no quiero químicos"
+
+IA: "Te recomiendo nuestro Magnesio + Ashwagandha. 100% natural, sin químicos sintéticos. Clientes reportan mejor sueño en 7-10 días. ¿Tienes alguna condición médica o tomas medicamentos? (importante verificar compatibilidad)"
+
+Cliente: "Solo tomo vitamina D"
+
+IA: "Perfecto, no hay interacción. El magnesio incluso mejora la absorción de vitamina D. ¿Quieres el frasco de 60 cápsulas (€19.99, 1 mes) o el pack de 3 meses (€49.99, ahorras €9)?"
+
+Cliente: "El de 3 meses"
+
+IA: "Excelente. Añadido al carrito. ¿Quieres que te ayude con algo más o paso a checkout?"
+</div>
+
+<p><strong>Resultados en 3 meses:</strong></p>
+
+<ul>
+  <li>Ventas fuera de horario: €0 → €12k/mes (+∞%)</li>
+  <li>Conversión general: 1.8% → 3.2% (+77%)</li>
+  <li>Ticket promedio: €34 → €51 (+50%, gracias a upsells inteligentes)</li>
+  <li>Soporte humano: -60% consultas repetitivas</li>
+</ul>
+
+<p><strong>Costo: €120/mes. ROI: 10000%.</strong></p>
+
+<h3>Caso 3: Recomendaciones Personalizadas con IA</h3>
+
+<p><strong>Negocio:</strong> Librería online especializada (Buenos Aires)</p>
+
+<p><strong>Problema:</strong> Vendían bien, pero solo 12% de clientes compraban más de 1 libro. El "También te puede gustar" de Shopify era genérico y no convertía.</p>
+
+<p><strong>Solución con IA:</strong> Sistema de recomendaciones basado en:</p>
+
+<ul>
+  <li>Libros ya comprados</li>
+  <li>Historial de navegación</li>
+  <li>Tiempo en cada página de producto</li>
+  <li>Géneros/autores favoritos</li>
+  <li>Comportamiento de clientes similares</li>
+</ul>
+
+<p>Agregaron también:</p>
+<ul>
+  <li>"Si te gustó X, te encantará Y" (basado en análisis de reseñas con IA)</li>
+  <li>Email semanal: "3 libros elegidos para ti" (personalizado por cliente)</li>
+</ul>
+
+<p><strong>Resultados en 5 meses:</strong></p>
+
+<ul>
+  <li>Compra de 2+ libros: 12% → 34% clientes (+183%)</li>
+  <li>Valor promedio de orden: €18 → €31 (+72%)</li>
+  <li>Click-through en emails: 8% → 28% (+250%)</li>
+  <li>Ingresos: +€22k/mes</li>
+</ul>
+
+<p><strong>Costo IA: €150/mes. ROI: 14666%.</strong></p>
+
+<h3>Caso 4: Descripciones de Producto Automáticas</h3>
+
+<p><strong>Negocio:</strong> Dropshipping de gadgets (España)</p>
+
+<p><strong>Problema:</strong> Catálogo de 800 productos. 500 tenían descripciones pobres copiadas del proveedor chino. No vendían.</p>
+
+<p><strong>Solución con IA:</strong> Usaron Claude para reescribir todas las descripciones:</p>
+
+<ul>
+  <li>Entrada: nombre del producto + specs técnicas + reseñas de Amazon</li>
+  <li>Salida: Descripción persuasiva de 100-150 palabras + lista de beneficios emocionales + FAQ + keywords SEO</li>
+</ul>
+
+<p>Tomó 2 semanas procesar 800 productos (vs. 3-4 meses si lo hacían manualmente).</p>
+
+<p><strong>Resultados en 2 meses:</strong></p>
+
+<ul>
+  <li>Tráfico orgánico: +140% (mejor SEO)</li>
+  <li>Conversión: 0.9% → 2.1% (+133%)</li>
+  <li>Retorno de productos: -22% (clientes entendían mejor qué compraban)</li>
+  <li>Ingresos: +€18k/mes</li>
+</ul>
+
+<p><strong>Costo: €200 one-time (API Claude). ROI infinito (inversión única).</strong></p>
+
+<h3>Caso 5: Análisis Predictivo de Inventario</h3>
+
+<p><strong>Negocio:</strong> Tienda de electrónica (Bogotá)</p>
+
+<p><strong>Problema:</strong> Productos populares se agotaban rápido (perdían ventas). Productos lentos acumulaban stock (dinero muerto).</p>
+
+<p><strong>Solución con IA:</strong> Sistema que predice demanda 30 días adelante basado en:</p>
+
+<ul>
+  <li>Ventas históricas (2 años)</li>
+  <li>Tendencias de búsqueda en Google</li>
+  <li>Temporalidad (Navidad, Black Friday, etc.)</li>
+  <li>Campañas de marketing planificadas</li>
+  <li>Comportamiento de competencia</li>
+</ul>
+
+<p>Genera alertas automáticas: "Ordenar 50 unidades de [PRODUCTO X] esta semana para evitar quiebre de stock".</p>
+
+<p><strong>Resultados en 6 meses:</strong></p>
+
+<ul>
+  <li>Quiebres de stock: -85%</li>
+  <li>Inventario lento: -40%</li>
+  <li>Ventas perdidas por no-disponibilidad: -€30k → -€4k/mes (-87%)</li>
+  <li>Capital liberado de inventario muerto: €80k (reinvertido en productos que sí venden)</li>
+</ul>
+
+<p><strong>Costo: €250/mes (herramienta SaaS). ROI: 10400% anual.</strong></p>
+
+<h2>Herramientas de IA para E-commerce en 2026</h2>
+
+<h3>1. Chatbots y Atención al Cliente</h3>
+
+<ul>
+  <li><strong>Tidio + ChatGPT:</strong> €29/mes. Chatbot que responde en tiempo real. Integración con Shopify/WooCommerce.</li>
+  <li><strong>Intercom + IA:</strong> €99/mes. Más robusto, incluye CRM. Ideal para tiendas grandes.</li>
+  <li><strong>Make + Claude API:</strong> €50-150/mes. Custom, más flexible. Requiere setup técnico.</li>
+</ul>
+
+<h3>2. Recuperación de Carritos</h3>
+
+<ul>
+  <li><strong>Klaviyo + IA:</strong> €20-100/mes según tamaño lista. Email + SMS personalizados.</li>
+  <li><strong>Omnisend:</strong> €16/mes. Bueno para empezar, menos avanzado.</li>
+  <li><strong>Make + n8n:</strong> Custom, más control. €30-80/mes.</li>
+</ul>
+
+<h3>3. Recomendaciones de Productos</h3>
+
+<ul>
+  <li><strong>LimeSpot (Shopify):</strong> €19/mes. Plug-and-play.</li>
+  <li><strong>Nosto:</strong> €500+/mes. Enterprise, muy potente.</li>
+  <li><strong>Rebuy (Shopify):</strong> €99/mes. Buena relación precio/valor.</li>
+</ul>
+
+<h3>4. Generación de Contenido</h3>
+
+<ul>
+  <li><strong>Claude API:</strong> €10-50/mes. Descripciones, emails, FAQs.</li>
+  <li><strong>Jasper:</strong> €49/mes. Interfaz amigable, menos flexible.</li>
+  <li><strong>Copy.ai:</strong> €36/mes. Bueno para copywriting rápido.</li>
+</ul>
+
+<h3>5. Análisis Predictivo</h3>
+
+<ul>
+  <li><strong>Inventory Planner:</strong> €249/mes. Predicción de demanda + reorden automático.</li>
+  <li><strong>Forecastly:</strong> €99/mes. Bueno para tiendas medianas.</li>
+  <li><strong>Excel + Python + OpenAI:</strong> Gratis-€30/mes. Requiere conocimiento técnico, pero es lo más potente.</li>
+</ul>
+
+<h2>Cómo Implementar IA en tu E-commerce: Guía Paso a Paso</h2>
+
+<h3>Paso 1: Identifica tu Mayor Problema (10 minutos)</h3>
+
+<p>No implementes IA por moda. Identifica 1 problema real que te cuesta dinero:</p>
+
+<ul>
+  <li>¿Pierdes ventas por carritos abandonados? → IA de recuperación.</li>
+  <li>¿Nadie compra fuera de horario? → Chatbot 24/7.</li>
+  <li>¿Productos no se venden porque descripciones son malas? → IA de contenido.</li>
+  <li>¿Stock siempre desbalanceado? → IA predictiva.</li>
+</ul>
+
+<p>Elige 1. Arréglalo. Luego sigue con el siguiente.</p>
+
+<h3>Paso 2: Calcula el ROI Esperado (15 minutos)</h3>
+
+<p>Antes de invertir, haz las cuentas:</p>
+
+<div class="code-block">
+Problema: Carritos abandonados
+- Carritos/mes: 500
+- Valor promedio: €60
+- Recuperación actual: 5% = 25 ventas = €1500/mes
+- Recuperación con IA: 20% = 100 ventas = €6000/mes
+- Ganancia extra: €4500/mes
+- Costo IA: €100/mes
+- ROI: 4500%
+
+¿Vale la pena? Sí.
+</div>
+
+<p>Si el ROI esperado es >1000%, hazlo. Si es <500%, revisa si hay mejor oportunidad.</p>
+
+<h3>Paso 3: Elige la Herramienta (30 minutos)</h3>
+
+<p>Opciones:</p>
+
+<ul>
+  <li><strong>Plug-and-play (fácil):</strong> Tidio, Klaviyo, LimeSpot. Setup en horas. Menos flexible.</li>
+  <li><strong>APIs (medio):</strong> Make + Claude, n8n + OpenAI. Setup en días. Muy flexible.</li>
+  <li><strong>Custom (avanzado):</strong> Desarrollo propio con Python + OpenAI API. Setup en semanas. Control total.</li>
+</ul>
+
+<p>Para empezar: plug-and-play. Escala a APIs cuando necesites más control.</p>
+
+<h3>Paso 4: Test en Pequeño (1-2 semanas)</h3>
+
+<p>No lo implementes a todo tu tráfico de golpe. Empieza con 10-20% y mide:</p>
+
+<ul>
+  <li>¿La IA responde correctamente?</li>
+  <li>¿Está generando ventas extras?</li>
+  <li>¿Los clientes se quejan?</li>
+</ul>
+
+<p>Ajusta hasta que funcione 85%+. Luego escala al 100%.</p>
+
+<h3>Paso 5: Mide y Optimiza (mensual)</h3>
+
+<p>Revisa cada mes:</p>
+
+<ul>
+  <li>Ventas extras generadas por IA</li>
+  <li>Costo de herramientas</li>
+  <li>ROI real vs. esperado</li>
+  <li>Quejas/problemas reportados</li>
+</ul>
+
+<p>Si el ROI baja, optimiza. Si sube, invierte más.</p>
+
+<h2>Errores Comunes (y Cómo Evitarlos)</h2>
+
+<p><strong>Error 1: Implementar IA sin medir</strong></p>
+
+<p>Si no mides, no sabes si funciona. Instala tracking desde día 1.</p>
+
+<p><strong>Error 2: Chatbot que suena robótico</strong></p>
+
+<p>Configura el tono en el prompt. "Amigable, cercano, útil" > "Asistente virtual".</p>
+
+<p><strong>Error 3: Recomendaciones genéricas</strong></p>
+
+<p>Si la IA recomienda lo mismo a todos, no sirve. Necesita datos de comportamiento real.</p>
+
+<p><strong>Error 4: No entrenar la IA</strong></p>
+
+<p>Los primeros 30 días la IA comete errores. Revisa conversaciones, ajusta prompts, mejora.</p>
+
+<p><strong>Error 5: Automatizar todo de golpe</strong></p>
+
+<p>Empieza con 1 proceso. Domínalo. Luego agrega otro. No automatices caos; organiza primero.</p>
+
+<h2>Conclusión: E-commerce Sin IA es E-commerce Muerto</h2>
+
+<p>En 2026, usar IA en e-commerce no es opcional. Es supervivencia.</p>
+
+<p>Las tiendas con IA:</p>
+
+<ul>
+  <li>Venden 24/7 sin descanso</li>
+  <li>Personalizan a escala masiva</li>
+  <li>Recuperan carritos que otros pierden</li>
+  <li>Optimizan inventario en tiempo real</li>
+  <li>Escalan sin contratar equipos grandes</li>
+</ul>
+
+<p>Las tiendas sin IA compiten con una mano atada.</p>
+
+<p><strong>Tu acción hoy:</strong></p>
+
+<ol>
+  <li>Identifica 1 problema que te cuesta dinero</li>
+  <li>Calcula cuánto ganas/ahorras resolviéndolo con IA</li>
+  <li>Elige 1 herramienta (empieza simple)</li>
+  <li>Test en pequeño 1-2 semanas</li>
+  <li>Mide el resultado en dinero real</li>
+  <li>Si funciona, escala. Si no, pivota</li>
+</ol>
+
+<p>El e-commerce del futuro ya está aquí. O te subes, o te quedas atrás.</p>
+
+  </div>
+
+  <div class="cta-box">
+    <h3>¿Quieres escalar tu e-commerce con IA?</h3>
+    <p>Estrategias semanales para vender más con automatización inteligente.</p>
+    <a href="index.html#newsletter" class="btn-primary">Suscríbete Gratis →</a>
+  </div>
+
+</article>
+
+<footer>
+  <p>&copy; 2026 IA Negocios. Contenido gratuito para emprendedores hispanohablantes.</p>
+</footer>
+
+</body>
+</html>
