@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>50 Prompts de ChatGPT Probados para Vender Más | IA Negocios</title>
+<meta name="description" content="50 prompts de ChatGPT efectivos para aumentar ventas. Scripts de venta, emails, copywriting y técnicas que cierran clientes. Probado por emprendedores reales.">
+<meta name="keywords" content="prompts chatgpt ventas, scripts venta chatgpt, copywriting gpt, prompts efectivos, técnicas venta ia">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+ :root {
+ --bg: #050508;
+ --bg2: #0a0a12;
+ --surface: #0f0f1a;
+ --border: #1a1a2e;
+ --accent: #00d4ff;
+ --accent2: #7b2ff7;
+ --accent3: #00ff88;
+ --text: #e8e8f0;
+ --text2: #8888aa;
+ --text3: #444466;
+ }
+
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ html { scroll-behavior: smooth; }
+ body {
+ background: var(--bg);
+ color: var(--text);
+ font-family: 'DM Sans', sans-serif;
+ overflow-x: hidden;
+ }
+
+ body::before {
+ content: '';
+ position: fixed;
+ inset: 0;
+ background-image:
+ linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+ linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+ background-size: 60px 60px;
+ pointer-events: none;
+ z-index: 0;
+ }
+
+ nav {
+ position: fixed;
+ top: 0; left: 0; right: 0;
+ z-index: 100;
+ padding: 20px 60px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ background: rgba(5,5,8,0.95);
+ backdrop-filter: blur(20px);
+ border-bottom: 1px solid var(--border);
+ }
+
+ .logo {
+ font-family: 'Syne', sans-serif;
+ font-weight: 800;
+ font-size: 1.4rem;
+ letter-spacing: -0.02em;
+ }
+
+ .logo span { color: var(--accent); }
+
+ .nav-links {
+ display: flex;
+ gap: 40px;
+ list-style: none;
+ }
+
+ .nav-links a {
+ color: var(--text2);
+ text-decoration: none;
+ font-size: 0.9rem;
+ font-weight: 500;
+ transition: color 0.2s;
+ }
+
+ .nav-links a:hover { color: var(--accent); }
+
+ .article {
+ max-width: 900px;
+ margin: 0 auto;
+ padding: 140px 40px 80px;
+ position: relative;
+ z-index: 1;
+ }
+
+ .article-header { margin-bottom: 60px; }
+
+ .article-tag {
+ display: inline-block;
+ padding: 6px 16px;
+ background: rgba(0,212,255,0.1);
+ color: var(--accent);
+ border-radius: 100px;
+ font-size: 0.75rem;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ margin-bottom: 16px;
+ }
+
+ .article h1 {
+ font-family: 'Syne', sans-serif;
+ font-weight: 800;
+ font-size: clamp(2.5rem, 5vw, 4rem);
+ line-height: 1.2;
+ letter-spacing: -0.02em;
+ margin-bottom: 20px;
+ }
+
+ .article-meta {
+ display: flex;
+ gap: 20px;
+ color: var(--text2);
+ font-size: 0.9rem;
+ margin-bottom: 40px;
+ }
+
+ .article-content {
+ line-height: 1.8;
+ color: var(--text);
+ }
+
+ .article-content h2 {
+ font-family: 'Syne', sans-serif;
+ font-weight: 700;
+ font-size: 1.8rem;
+ margin: 40px 0 20px 0;
+ color: var(--accent);
+ }
+
+ .article-content h3 {
+ font-family: 'Syne', sans-serif;
+ font-weight: 600;
+ font-size: 1.3rem;
+ margin: 30px 0 15px 0;
+ }
+
+ .article-content p {
+ margin-bottom: 18px;
+ color: var(--text2);
+ }
+
+ .article-content p strong { color: var(--text); }
+
+ .article-content ul, .article-content ol {
+ margin: 20px 0 20px 30px;
+ color: var(--text2);
+ }
+
+ .article-content li { margin-bottom: 12px; }
+
+ .highlight-box {
+ background: rgba(0,212,255,0.08);
+ border-left: 4px solid var(--accent);
+ padding: 24px;
+ border-radius: 8px;
+ margin: 30px 0;
+ }
+
+ .highlight-box strong { color: var(--accent); }
+
+ .code-block {
+ background: var(--surface);
+ border: 1px solid var(--border);
+ padding: 20px;
+ border-radius: 8px;
+ font-family: 'Monaco', monospace;
+ font-size: 0.9rem;
+ overflow-x: auto;
+ margin: 20px 0;
+ color: var(--accent3);
+ white-space: pre-wrap;
+ word-break: break-word;
+ }
+
+ .prompt-box {
+ background: var(--surface);
+ border: 1px solid var(--border);
+ padding: 20px;
+ border-radius: 8px;
+ margin: 20px 0;
+ border-left: 4px solid var(--accent);
+ }
+
+ .prompt-title {
+ color: var(--accent);
+ font-weight: 700;
+ margin-bottom: 10px;
+ }
+
+ .cta-box {
+ background: linear-gradient(135deg, rgba(0,212,255,0.1), rgba(123,47,247,0.1));
+ border: 1px solid var(--border);
+ padding: 40px;
+ border-radius: 16px;
+ margin: 50px 0;
+ text-align: center;
+ }
+
+ .cta-box h3 { margin-bottom: 16px; }
+
+ .btn-primary {
+ display: inline-block;
+ padding: 14px 32px;
+ background: var(--accent);
+ color: var(--bg);
+ border: none;
+ border-radius: 8px;
+ font-weight: 700;
+ cursor: pointer;
+ text-decoration: none;
+ transition: all 0.2s;
+ }
+
+ .btn-primary:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 0 30px rgba(0,212,255,0.3);
+ }
+
+ footer {
+ padding: 60px 40px;
+ border-top: 1px solid var(--border);
+ text-align: center;
+ color: var(--text3);
+ margin-top: 80px;
+ }
+
+ @media (max-width: 768px) {
+ nav { padding: 20px; }
+ .article { padding: 120px 20px 60px; }
+ .article-content h2 { font-size: 1.4rem; }
+ }
+</style>
+</head>
+<body>
+
+<nav>
+ <div class="logo"><span>ia</span>negocios</div>
+ <ul class="nav-links">
+ <li><a href="index.html">Inicio</a></li>
+ <li><a href="index.html#articles">Artículos</a></li>
+ </ul>
+</nav>
+
+<article class="article">
+ <div class="article-header">
+ <span class="article-tag">ChatGPT</span>
+ <h1>50 Prompts de ChatGPT que Cierran Clientes</h1>
+ <div class="article-meta">
+ <span>📅 23 de mayo de 2026</span>
+ <span>⏱️ 12 min de lectura</span>
+ <span>👤 Miguel Villa</span>
+ </div>
+ </div>
+
+ <div class="article-content">
+
+<p>ChatGPT no es solo para tareas. <strong>Es tu mejor closer si sabes cómo usarlo</strong>.</p>
+
+<p>Estos 50 prompts están probados por emprendedores reales que generan dinero con ellos. Úsalos copy-paste, personaliza y genera leads, clientes y dinero.</p>
+
+<h2>Cómo Usar Estos Prompts</h2>
+
+<p><strong>Paso 1:</strong> Copia el prompt exactamente.</p>
+
+<p><strong>Paso 2:</strong> Reemplaza [INFORMACIÓN] con tus datos reales.</p>
+
+<p><strong>Paso 3:</strong> Pega en ChatGPT y genera.</p>
+
+<p><strong>Paso 4:</strong> Adapta la salida a tu estilo.</p>
+
+<p><strong>Paso 5:</strong> Usa y mide: ¿Cuántos clientes convertiste?</strong></p>
+
+<h2>Sección 1: Prompts para Escribir Emails de Venta</h2>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 1: Email de Follow-up para Lead Frío</div>
+ <p>Escribe un email de follow-up para un prospect que no respondió mi primer email. El prospect es [NOMBRE EMPRESA], mi producto es [PRODUCTO], el beneficio principal es [BENEFICIO]. Tono: directo, sin spam. Máximo 100 palabras.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 2: Email de Descuento Urgente</div>
+ <p>Escribe un email que cree urgencia sin mentir. Mi producto es [PRODUCTO], el descuento es [%DESCUENTO], expira [FECHA]. Objetivo: que compren hoy. Máximo 80 palabras.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 3: Email de Objección: "Es muy caro"</div>
+ <p>Escribe un email de respuesta para un cliente que dice "Es muy caro". Mi producto cuesta [PRECIO], proporciona [BENEFICIOS]. Responde la objeción sin bajar precio. Máximo 120 palabras.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 4: Email de Re-engagement</div>
+ <p>Escribe un email para clientes que compraron hace 6+ meses y no han vuelto. Ofrecerles [PRODUCTO/DESCUENTO]. Tono: amigable, sin presión. Máximo 100 palabras.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 5: Email de Bienvenida Post-Compra</div>
+ <p>Escribe email para nuevo cliente que acaba de comprar [PRODUCTO]. Objetivo: que se sienta bienvenido, maximizar satisfacción, crear lealtad. Incluir: agradecimiento, next steps, bonus. Máximo 120 palabras.</p>
+</div>
+
+<h2>Sección 2: Prompts para Scripts de Venta en WhatsApp/SMS</h2>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 6: Mensaje de Prospección en WhatsApp</div>
+ <p>Escribe un mensaje corto en WhatsApp para prospectar [TIPO NEGOCIO]. Yo vendo [PRODUCTO/SERVICIO]. El beneficio es [BENEFICIO]. Máximo 3 líneas, sin spam, natural. Incluir CTA clara.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 7: Mensaje de Seguimiento (Lead No-Respondió)</div>
+ <p>Escribe follow-up para alguien que no respondió mi primer mensaje. Soy vendedor de [PRODUCTO]. Máximo 2 líneas. Objetivo: que responda o que niegue clara. Sin presión.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 8: Mensaje para Calificar Lead</div>
+ <p>Escribe un mensaje para calificar si el lead tiene presupuesto. Yo vendo [PRODUCTO] a [PRECIO]. Pregunta si tiene presupuesto disponible. Máximo 2 líneas. Si no tiene presupuesto, pedir referencia.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 9: Mensaje de "Dame 5 minutos"</div>
+ <p>Escribe un mensaje corto pidiendo 5 minutos de llamada. Soy [TÚ], vendo [PRODUCTO], resuelvo [PROBLEMA]. Máximo 2 líneas. Include link de calendly o WhatsApp directo.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 10: Mensaje de Referencia</div>
+ <p>Escribe mensaje pidiendo referencia a cliente satisfecho. Vendo [PRODUCTO]. Ofrece [INCENTIVO] si refiere alguien que compre. Máximo 3 líneas, natural.</p>
+</div>
+
+<h2>Sección 3: Prompts para Landing Pages y Copy</h2>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 11: Headline para Landing Page</div>
+ <p>Escribe 5 headlines diferentes para landing page de [PRODUCTO]. Beneficio principal: [BENEFICIO]. Target: [AUDIENCIA]. Que sean provocativas, cortas (5-12 palabras). Sin clickbait.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 12: Descripción de Producto (100 palabras)</div>
+ <p>Escribe descripción de [PRODUCTO] enfocado en beneficios, no features. Target: [AUDIENCIA]. Problema que resuelve: [PROBLEMA]. Máximo 100 palabras, natural, sin marketing hype.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 13: FAQ Convincente</div>
+ <p>Escribe 10 preguntas frecuentes y respuestas para [PRODUCTO]. Enfoque: responder objeciones de compra. Las respuestas deben ser cortas (1-3 líneas máximo).</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 14: Descripción de Beneficio vs Feature</div>
+ <p>Mi producto tiene estas features: [LISTA]. Escribe los beneficios reales para el cliente. Ejemplo: Feature "API integrada" → Beneficio "Conecta con todo lo que usas".</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 15: Sección "Por Qué Nosotros"</div>
+ <p>Escribe sección "Por Qué Elegirnos" para landing page. Nuestras ventajas: [LISTA]. Competidores ofrecen: [QUÉ]. Escribe 3 párrafos que expliquen nuestra diferencia real.</p>
+</div>
+
+<h2>Sección 4: Prompts para Objecciones de Venta</h2>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 16: Objeción "Necesito pensarlo"</div>
+ <p>Escribe respuesta para cliente que dice "Necesito pensarlo". Vendo [PRODUCTO]. Responde sin presionar, pero cierra loop. Máximo 100 palabras.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 17: Objeción "Tu competencia es más barata"</div>
+ <p>Cliente dice competencia es más barata. Yo vendo [PRODUCTO] a [PRECIO]. Competencia cuesta [PRECIO_COMP]. Escribe respuesta que justifique diferencia sin bajar precio.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 18: Objeción "No tengo presupuesto"</div>
+ <p>Cliente: "No tengo presupuesto". Vendo [PRODUCTO], cuesta [PRECIO]. Escribe respuesta que explore si es real falta de presupuesto o falta de visión de valor.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 19: Objeción "¿Funciona realmente?"</div>
+ <p>Cliente duda si [PRODUCTO] funciona. Escribe respuesta que incluya: prueba social (casos reales), garantía, trial o demo ofrecido. Máximo 150 palabras.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 20: Objeción "Tengo una solución parecida"</div>
+ <p>Cliente dice ya usa [COMPETENCIA]. Vendo [PRODUCTO]. Escribe respuesta que posicione mi solución como mejor sin insultar la competencia.</p>
+</div>
+
+<h2>Sección 5: Prompts para Crear Contenido de Venta</h2>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 21: Script de Video Sales (30 segundos)</div>
+ <p>Escribe script de video sales de 30 segundos para [PRODUCTO]. Estructura: Hook (2 seg) → Problema (5 seg) → Solución (15 seg) → CTA (8 seg). Tono: urgente, amigable.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 22: Caso de Éxito/Testimonial</div>
+ <p>Escribe caso de éxito de un cliente ficticio pero realista que usa [PRODUCTO]. Incluir: situación inicial, problema, solución, resultados (números concretos), quote del cliente.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 23: Post de Instagram para Vender</div>
+ <p>Escribe post de Instagram que venda [PRODUCTO] sin parecer anuncio. Audience: [AUDIENCIA]. Incluir: hook, storytelling, CTA clara (link bio o DM). Máximo 200 caracteres.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 24: Thread de Twitter sobre Problema que Resuelvo</div>
+ <p>Escribe thread de 5 tweets sobre [PROBLEMA que tu producto resuelve]. Estructura: Hook + 3 tips útiles + CTA final. Educativo y útil, no salesy.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 25: Email de Webinar/Evento</div>
+ <p>Escribe email promocionando webinar sobre [TEMA]. Objetivo: que registren. Incluir: qué van a aprender, quién presenta, fecha/hora, link de registro. Máximo 150 palabras.</p>
+</div>
+
+<h2>Sección 6: Prompts para Estrategia de Venta</h2>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 26: Perfil de Cliente Ideal (ICP)</div>
+ <p>Mi producto es [PRODUCTO]. Usuarios ideales: [DESCRIPCIÓN]. Escribe un perfil detallado: demografía, dolor, necesidades, presupuesto, dónde buscan soluciones.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 27: Mensajes de Venta por Etapa del Funnel</div>
+ <p>Escribe 3 mensajes de venta diferentes para: (1) Awareness (no me conocen), (2) Consideración (conocen mi marca), (3) Decisión (listos para comprar). Vendo [PRODUCTO].</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 28: Estrategia de Presupuesto/Pricing</div>
+ <p>Mi producto cuesta [PRECIO]. Mis clientes típicos ahorran [CANTIDAD] con mi producto. Escribe argumentos que justifiquen el precio basado en ROI para el cliente.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 29: Plan de Follow-up (7 días)</div>
+ <p>Escribe un plan de 7 puntos de contacto para seguimiento de un lead que no ha comprado. Vendo [PRODUCTO]. Canales: email, WhatsApp, llamada. Cadencia y mensajes específicos.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 30: Argumentos de Venta (Top 5)</div>
+ <p>Mi producto [PRODUCTO] tiene estos beneficios: [LISTA]. Escribe los top 5 argumentos de venta ordenados por impacto. Incluir números/estadísticas cuando sea posible.</p>
+</div>
+
+<h2>Sección 7: Prompts para Análisis y Optimización</h2>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 31: Análisis DAFO de Producto</div>
+ <p>Mi producto: [DESCRIPCIÓN]. Competidores: [NOMBRES]. Escribe análisis DAFO (Debilidades, Amenazas, Fortalezas, Oportunidades) para vender mejor.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 32: Por Qué Pierdo Clientes (Análisis)</div>
+ <p>Vendo [PRODUCTO] a [PRECIO]. Tasa de conversión: [%]. Objeciones más comunes: [LISTA]. Escribe análisis de por qué pierdo clientes y cómo solucionarlo.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 33: Checklist de Venta (Para Team)</div>
+ <p>Crea checklist detallado de pasos que mi equipo debe seguir para cerrar una venta de [PRODUCTO]. Desde prospección hasta post-venta. 15-20 items.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 34: Preguntas de Calificación (BANT)</div>
+ <p>Mi producto [PRODUCTO], presupuesto típico [RANGO]. Escribe 8 preguntas de calificación usando metodología BANT (Budget, Authority, Need, Timeline).</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 35: Benchmarking de Competencia</div>
+ <p>Mis competidores son: [LISTA]. Vendo [PRODUCTO]. Escribe análisis de cómo ellos venden, qué mensajes usan, puntos débiles que puedo explotar.</p>
+</div>
+
+<h2>Sección 8: Prompts Avanzados para Cierre</h2>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 36: Cierre por Urgencia</div>
+ <p>Escribe mensaje de cierre creando urgencia (SIN MENTIR). Vendo [PRODUCTO], tengo [LIMITACIÓN REAL]. Máximo 100 palabras. Objeto: que cierren hoy.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 37: Cierre por Autoridad</div>
+ <p>Escribe mensaje mencionando otros clientes que usan [PRODUCTO] (sin revelar nombres). Objetivo: que vea que otros confían en mí. Máximo 80 palabras.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 38: Cierre por Prueba Social</div>
+ <p>Escribe email/mensaje que incluya: número de clientes satisfechos, testimonial, caso de éxito. Vendo [PRODUCTO]. Objetivo: generar confianza y cerrar.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 39: Cierre por Scarcity</div>
+ <p>Tengo solo [N] slots disponibles. Vendo [PRODUCTO]. Escribe mensaje que comunique esto sin parecer spam. Objetivo: que cierren antes de que se agoten.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 40: Call to Action Irresistible</div>
+ <p>Mi producto: [PRODUCTO]. Escribe 5 CTAs diferentes (cada una diferente en tono/enfoque). Objetivo: convertir curiosidad en acción. Máximo 10 palabras cada una.</p>
+</div>
+
+<h2>Sección 9: Prompts para Después de la Venta</h2>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 41: Email de Bienvenida Detallado</div>
+ <p>Cliente acaba de comprar [PRODUCTO] a [PRECIO]. Escribe email de bienvenida que incluya: agradecimiento, onboarding, bonus, próximos pasos. Máximo 200 palabras.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 42: Email de Referencia (Incentivizado)</div>
+ <p>Vendo [PRODUCTO]. Ofrece [INCENTIVO] si refieren a alguien que compre. Escribe email pidiendo referencias. Máximo 100 palabras. Natural, sin presión.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 43: Email de Upsell</div>
+ <p>Cliente compró [PRODUCTO_BASE]. Tengo [PRODUCTO_PREMIUM] que complementa. Escribe email de upsell. Máximo 120 palabras. Objetivo: que compren el upgrade.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 44: Email de Check-in (30 días post-compra)</div>
+ <p>Hace 30 días cliente compró [PRODUCTO]. Escribe email de check-in: ¿Cómo va? ¿Necesita ayuda? ¿Tiene feedback? Máximo 100 palabras.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 45: Email de Reactivación (Cliente Inactivo)</div>
+ <p>Cliente compró hace 6+ meses, no ha vuelto. Vendo [PRODUCTO]. Escribe email de reactivación ofreciendo [NUEVO_INCENTIVO]. Máximo 100 palabras.</p>
+</div>
+
+<h2>Sección 10: Bonus Prompts Efectivos</h2>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 46: "¿Cuánto Vale mi Producto?"</div>
+ <p>Mi producto [DESCRIPCIÓN] proporciona [BENEFICIOS]. Cliente típico ahorraría [CANTIDAD]. Escribe argumento de precio basado en ROI de 1 párrafo.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 47: Email de Disculpa + Cierre</div>
+ <p>Lead me ignoró 3 veces. Escribe email divertido/honesto disculpándome e intentando cerrar. Vendo [PRODUCTO]. Máximo 80 palabras. Humor es OK.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 48: Análisis de Email que Fracasó</div>
+ <p>Envié este email y nadie respondió: [PEGAR EMAIL]. Vendo [PRODUCTO]. ¿Por qué fracasó? ¿Qué cambiaría? Escribe nuevo email mejorado.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 49: Message de "Último Intento" (Respectuoso)</div>
+ <p>Cliente no respondió después de 3 intentos. Vendo [PRODUCTO]. Escribe último email/mensaje respetuoso pidiendo respuesta o silencio (cierre gracioso). Máximo 60 palabras.</p>
+</div>
+
+<div class="prompt-box">
+ <div class="prompt-title">Prompt 50: Análisis de Conversación de Venta Real</div>
+ <p>Aquí está una conversación real con cliente: [PEGAR]. Analiza: ¿Dónde fallé? ¿Qué preguntas no hice? ¿Cómo hubieras cerrado? Escribe feedback específico.</p>
+</div>
+
+<h2>Conclusión: ChatGPT es tu Sales Team</h2>
+
+<p>Estos 50 prompts son armas de venta. <strong>Úsalos consistentemente y verás dinero</strong>.</p>
+
+<p>La gente que hace dinero con IA en 2026 no es porque "ChatGPT lo hace". Es porque saben cómo dirigir a ChatGPT hacia conversiones reales.</p>
+
+<p>Tu acción hoy: Toma 5 prompts que apliquen a tu negocio. Personalízalos. Úsalos para escribir 10 emails o mensajes. Manda. Mide conversión.</p>
+
+<p>Si uno solo te genera 1 cliente, ya ganaste. Escala.</p>
+
+ </div>
+
+ <div class="cta-box">
+ <h3>Quieres Más Prompts como Estos?</h3>
+ <p>Descarga nuestro PDF con 100+ prompts actualizados semanalmente.</p>
+ <a href="index.html#newsletter" class="btn-primary">Suscríbete al Newsletter →</a>
+ </div>
+
+</article>
+
+<footer>
+ <p>&copy; 2026 IA Negocios. Contenido gratuito para emprendedores hispanohablantes.</p>
+</footer>
+
+</body>
+</html>
