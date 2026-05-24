@@ -13,6 +13,8 @@
  gtag('js', new Date());
  gtag('config', 'G-D34Y3PWX9D');
 </script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3272495041344293"
+ crossorigin="anonymous"></script>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -156,6 +158,21 @@
  .nav-cta:hover {
  background: var(--accent) !important;
  color: var(--bg) !important;
+ }
+
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ gap: 6px;
+ cursor: pointer;
+ z-index: 101;
+ }
+
+ .hamburger span {
+ width: 25px;
+ height: 2px;
+ background: var(--text);
+ transition: all 0.3s;
  }
 
  /* HERO */
@@ -613,6 +630,167 @@
  ::-webkit-scrollbar { width: 4px; }
  ::-webkit-scrollbar-track { background: var(--bg); }
  ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+
+ /* MOBILE RESPONSIVE */
+ @media (max-width: 768px) {
+   body {
+     cursor: auto;
+   }
+   
+   .cursor, .cursor-ring {
+     display: none;
+   }
+
+   nav {
+     padding: 15px 20px;
+   }
+
+   .nav-links {
+     position: fixed;
+     top: 0;
+     right: -100%;
+     height: 100vh;
+     width: 70%;
+     max-width: 300px;
+     background: rgba(15,15,26,0.98);
+     backdrop-filter: blur(20px);
+     flex-direction: column;
+     padding: 80px 30px 30px;
+     gap: 24px;
+     transition: right 0.3s ease;
+     border-left: 1px solid var(--border);
+   }
+
+   .nav-links.active {
+     right: 0;
+   }
+
+   .nav-links li {
+     width: 100%;
+   }
+
+   .nav-links a {
+     display: block;
+     font-size: 1.1rem;
+   }
+
+   .hamburger {
+     display: flex;
+   }
+
+   .hamburger.active span:nth-child(1) {
+     transform: rotate(45deg) translate(8px, 8px);
+   }
+
+   .hamburger.active span:nth-child(2) {
+     opacity: 0;
+   }
+
+   .hamburger.active span:nth-child(3) {
+     transform: rotate(-45deg) translate(7px, -7px);
+   }
+
+   .hero {
+     padding: 100px 20px 60px;
+     min-height: 90vh;
+   }
+
+   .hero h1 {
+     font-size: 2.5rem;
+     line-height: 1.1;
+   }
+
+   .hero p {
+     font-size: 1rem;
+     margin-bottom: 32px;
+   }
+
+   .hero-ctas {
+     flex-direction: column;
+     gap: 12px;
+   }
+
+   .hero-ctas a {
+     width: 100%;
+     text-align: center;
+   }
+
+   .stats {
+     grid-template-columns: 1fr;
+     padding: 20px;
+     gap: 0;
+   }
+
+   .stat {
+     padding: 30px 20px;
+   }
+
+   .stat-num {
+     font-size: 2.5rem;
+   }
+
+   .categories, .featured, .newsletter {
+     padding: 60px 20px;
+   }
+
+   .section-title {
+     font-size: 1.8rem;
+     margin-bottom: 40px;
+   }
+
+   .cards-grid {
+     grid-template-columns: 1fr;
+   }
+
+   .card {
+     padding: 30px;
+   }
+
+   .articles-grid {
+     grid-template-columns: 1fr;
+   }
+
+   .articles-side {
+     gap: 12px;
+   }
+
+   .article-img {
+     height: 200px;
+     font-size: 3.5rem;
+   }
+
+   .article-content, .article-small {
+     padding: 24px;
+   }
+
+   .newsletter-box {
+     padding: 40px 24px;
+   }
+
+   .newsletter-box h2 {
+     font-size: 1.5rem;
+   }
+
+   .newsletter-form {
+     flex-direction: column;
+   }
+
+   .newsletter-form input,
+   .newsletter-form button {
+     width: 100%;
+   }
+
+   footer {
+     flex-direction: column;
+     gap: 20px;
+     padding: 40px 20px;
+     text-align: center;
+   }
+
+   .footer-links {
+     gap: 20px;
+   }
+ }
 </style>
 </head>
 <body>
@@ -625,12 +803,17 @@
  <div class="logo">
  <span>ia</span>negocios<span class="logo-dot"></span>
  </div>
- <ul class="nav-links">
+ <div class="hamburger" id="hamburger">
+   <span></span>
+   <span></span>
+   <span></span>
+ </div>
+ <ul class="nav-links" id="navLinks">
  <li><a href="#">Herramientas</a></li>
  <li><a href="#">Guías</a></li>
  <li><a href="#">Automatización</a></li>
  <li><a href="#">Agentes IA</a></li>
- <li><a href="#" class="nav-cta">Newsletter</a></li>
+ <li><a href="#newsletter" class="nav-cta">Newsletter</a></li>
  </ul>
 </nav>
 
@@ -649,8 +832,8 @@
  Guías prácticas, herramientas y estrategias de IA para emprendedores y empresas. Sin tecnicismos. Solo resultados.
  </p>
  <div class="hero-ctas">
- <a href="#" class="btn-primary">Explorar guías →</a>
- <a href="#" class="btn-ghost">Ver herramientas</a>
+ <a href="#articles" class="btn-primary">Explorar guías →</a>
+ <a href="#categories" class="btn-ghost">Ver herramientas</a>
  </div>
  </div>
 </section>
@@ -672,7 +855,7 @@
 </div>
 
 <!-- CATEGORIES -->
-<section class="categories">
+<section class="categories" id="categories">
  <div class="section-label">Explora por categoría</div>
  <h2 class="section-title">Todo lo que necesitas<br>para automatizar</h2>
  <div class="cards-grid fade-in">
@@ -691,7 +874,7 @@
  <h3>Análisis de datos</h3>
  <p>Toma decisiones más inteligentes con IA analizando tus métricas.</p>
  </a>
- <a href="automatizar-whatsapp-negocio.html" class="card" style="text-decoration: none; color: inherit;">
+ <a href="ia-atencion-clientes-24h.html" class="card" style="text-decoration: none; color: inherit;">
  <div class="card-icon">💬</div>
  <h3>Atención al cliente</h3>
  <p>Chatbots y agentes que responden a tus clientes al instante.</p>
@@ -710,7 +893,7 @@
 </section>
 
 <!-- FEATURED -->
-<section class="featured">
+<section class="featured" id="articles">
  <div class="section-label">Artículos destacados</div>
  <h2 class="section-title" style="margin-bottom:40px">Lo más leído esta semana</h2>
  <div class="articles-grid fade-in">
@@ -751,7 +934,7 @@
 </section>
 
 <!-- NEWSLETTER -->
-<section class="newsletter">
+<section class="newsletter" id="newsletter">
  <div class="newsletter-box fade-in">
  <h2>Únete a 50,000 emprendedores</h2>
  <p>Recibe cada semana las mejores estrategias de IA para hacer crecer tu negocio. Gratis, siempre.</p>
@@ -773,47 +956,66 @@
 </footer>
 
 <script>
- // Cursor
- const cursor = document.getElementById('cursor');
- const ring = document.getElementById('cursorRing');
- let mx = 0, my = 0, rx = 0, ry = 0;
+ // Hamburger menu
+ const hamburger = document.getElementById('hamburger');
+ const navLinks = document.getElementById('navLinks');
 
- document.addEventListener('mousemove', e => {
- mx = e.clientX; my = e.clientY;
- cursor.style.left = mx - 6 + 'px';
- cursor.style.top = my - 6 + 'px';
+ hamburger.addEventListener('click', () => {
+   hamburger.classList.toggle('active');
+   navLinks.classList.toggle('active');
  });
 
- function animRing() {
- rx += (mx - rx) * 0.12;
- ry += (my - ry) *.12;
- ring.style.left = rx - 18 + 'px';
- ring.style.top = ry - 18 + 'px';
- requestAnimationFrame(animRing);
+ // Close menu when clicking link
+ navLinks.querySelectorAll('a').forEach(link => {
+   link.addEventListener('click', () => {
+     hamburger.classList.remove('active');
+     navLinks.classList.remove('active');
+   });
+ });
+
+ // Cursor (only on desktop)
+ if (window.innerWidth > 768) {
+   const cursor = document.getElementById('cursor');
+   const ring = document.getElementById('cursorRing');
+   let mx = 0, my = 0, rx = 0, ry = 0;
+
+   document.addEventListener('mousemove', e => {
+     mx = e.clientX; my = e.clientY;
+     cursor.style.left = mx - 6 + 'px';
+     cursor.style.top = my - 6 + 'px';
+   });
+
+   function animRing() {
+     rx += (mx - rx) * 0.12;
+     ry += (my - ry) * 0.12;
+     ring.style.left = rx - 18 + 'px';
+     ring.style.top = ry - 18 + 'px';
+     requestAnimationFrame(animRing);
+   }
+   animRing();
  }
- animRing();
 
  // Scroll animations
  const obs = new IntersectionObserver(entries => {
- entries.forEach(e => {
- if (e.isIntersecting) e.target.classList.add('visible');
- });
+   entries.forEach(e => {
+     if (e.isIntersecting) e.target.classList.add('visible');
+   });
  }, { threshold: 0.1 });
 
  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
  // Counter animation
  document.querySelectorAll('.stat-num').forEach(el => {
- const target = el.textContent;
- const num = parseInt(target.replace(/\D/g, ''));
- const suffix = target.replace(/[\d]/g, '');
- let current = 0;
- const step = num / 60;
- const timer = setInterval(() => {
- current = Math.min(current + step, num);
- el.textContent = (suffix.startsWith('+') ? '+' : '') + Math.floor(current) + (suffix.includes('%') ? '%' : suffix.includes('K') ? 'K+' : '');
- if (current >= num) clearInterval(timer);
- }, 16);
+   const target = el.textContent;
+   const num = parseInt(target.replace(/\D/g, ''));
+   const suffix = target.replace(/[\d]/g, '');
+   let current = 0;
+   const step = num / 60;
+   const timer = setInterval(() => {
+     current = Math.min(current + step, num);
+     el.textContent = (suffix.startsWith('+') ? '+' : '') + Math.floor(current) + (suffix.includes('%') ? '%' : suffix.includes('K') ? 'K+' : '');
+     if (current >= num) clearInterval(timer);
+   }, 16);
  });
 </script>
 </body>
