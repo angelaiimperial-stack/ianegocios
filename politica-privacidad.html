@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad — IA Negocios</title>
+<meta name="description" content="Política de privacidad de IA Negocios. Conoce cómo protegemos tus datos personales según el RGPD y la legislación española.">
+<meta name="google-adsense-account" content="ca-pub-3272495041344293">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D34Y3PWX9D"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-D34Y3PWX9D');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3272495041344293"
+ crossorigin="anonymous"></script>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+ :root {
+ --bg: #050508;
+ --bg2: #0a0a12;
+ --surface: #0f0f1a;
+ --border: #1a1a2e;
+ --accent: #00d4ff;
+ --accent2: #7b2ff7;
+ --accent3: #00ff88;
+ --text: #e8e8f0;
+ --text2: #8888aa;
+ --text3: #444466;
+ }
+
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+
+ html { scroll-behavior: smooth; }
+
+ body {
+ background: var(--bg);
+ color: var(--text);
+ font-family: 'DM Sans', sans-serif;
+ overflow-x: hidden;
+ line-height: 1.8;
+ }
+
+ body::before {
+ content: '';
+ position: fixed;
+ inset: 0;
+ background-image:
+ linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+ linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+ background-size: 60px 60px;
+ pointer-events: none;
+ z-index: 0;
+ }
+
+ body::after {
+ content: '';
+ position: fixed;
+ inset: 0;
+ background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+ pointer-events: none;
+ z-index: 0;
+ opacity: 0.4;
+ }
+
+ nav {
+ position: fixed;
+ top: 0; left: 0; right: 0;
+ z-index: 100;
+ padding: 20px 60px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ background: rgba(5,5,8,0.8);
+ backdrop-filter: blur(20px);
+ border-bottom: 1px solid var(--border);
+ }
+
+ .logo {
+ font-family: 'Syne', sans-serif;
+ font-weight: 800;
+ font-size: 1.4rem;
+ letter-spacing: -0.02em;
+ }
+
+ .logo span { color: var(--accent); }
+
+ .nav-links {
+ display: flex;
+ gap: 40px;
+ list-style: none;
+ }
+
+ .nav-links a {
+ color: var(--text2);
+ text-decoration: none;
+ font-size: 0.9rem;
+ font-weight: 500;
+ transition: color 0.2s;
+ letter-spacing: 0.02em;
+ }
+
+ .nav-links a:hover { color: var(--accent); }
+
+ .container {
+ max-width: 900px;
+ margin: 120px auto 80px;
+ padding: 0 40px;
+ position: relative;
+ z-index: 1;
+ }
+
+ h1 {
+ font-family: 'Syne', sans-serif;
+ font-size: 3rem;
+ font-weight: 800;
+ margin-bottom: 20px;
+ background: linear-gradient(135deg, var(--accent), var(--accent3));
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ background-clip: text;
+ }
+
+ .last-update {
+ color: var(--text3);
+ font-size: 0.9rem;
+ margin-bottom: 40px;
+ }
+
+ h2 {
+ font-family: 'Syne', sans-serif;
+ font-size: 1.8rem;
+ font-weight: 700;
+ margin: 50px 0 20px;
+ color: var(--accent);
+ }
+
+ h3 {
+ font-family: 'Syne', sans-serif;
+ font-size: 1.3rem;
+ font-weight: 600;
+ margin: 30px 0 15px;
+ color: var(--accent3);
+ }
+
+ p {
+ font-size: 1rem;
+ color: var(--text2);
+ margin-bottom: 20px;
+ }
+
+ ul {
+ list-style: none;
+ margin: 20px 0;
+ }
+
+ ul li {
+ padding: 8px 0;
+ color: var(--text2);
+ position: relative;
+ padding-left: 25px;
+ }
+
+ ul li::before {
+ content: '→';
+ position: absolute;
+ left: 0;
+ color: var(--accent);
+ font-weight: bold;
+ }
+
+ .highlight-box {
+ background: var(--surface);
+ border: 1px solid var(--border);
+ border-radius: 12px;
+ padding: 25px;
+ margin: 30px 0;
+ }
+
+ footer {
+ background: var(--bg2);
+ padding: 40px;
+ text-align: center;
+ border-top: 1px solid var(--border);
+ margin-top: 80px;
+ position: relative;
+ z-index: 1;
+ }
+
+ footer p {
+ color: var(--text3);
+ font-size: 0.9rem;
+ margin-bottom: 15px;
+ }
+
+ .footer-links {
+ display: flex;
+ gap: 30px;
+ justify-content: center;
+ list-style: none;
+ }
+
+ .footer-links a {
+ color: var(--text2);
+ text-decoration: none;
+ font-size: 0.85rem;
+ transition: color 0.2s;
+ }
+
+ .footer-links a:hover { color: var(--accent); }
+
+ @media (max-width: 768px) {
+ nav { padding: 15px 20px; }
+ .container { padding: 0 20px; margin-top: 100px; }
+ h1 { font-size: 2rem; }
+ h2 { font-size: 1.5rem; }
+ .footer-links { flex-direction: column; gap: 15px; }
+ }
+</style>
+</head>
+<body>
+
+<nav>
+ <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;"><span>IA</span>Negocios</a></div>
+ <ul class="nav-links">
+ <li><a href="index.html#articulos">Artículos</a></li>
+ <li><a href="index.html#newsletter">Newsletter</a></li>
+ <li><a href="sobre-nosotros.html">Nosotros</a></li>
+ </ul>
+</nav>
+
+<div class="container">
+ <h1>Política de Privacidad</h1>
+ <p class="last-update">Última actualización: 4 de junio de 2026</p>
+
+ <p>En <strong>IA Negocios</strong> (ianegocios.lat), respetamos tu privacidad y nos comprometemos a proteger tus datos personales de acuerdo con el Reglamento General de Protección de Datos (RGPD) de la Unión Europea y la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD) de España.</p>
+
+ <h2>1. Responsable del Tratamiento de Datos</h2>
+
+ <p><strong>Identidad:</strong> IA Negocios<br>
+ <strong>Sitio web:</strong> ianegocios.lat<br>
+ <strong>Email de contacto:</strong> contacto@ianegocios.lat</p>
+
+ <h2>2. Datos que Recopilamos</h2>
+
+ <h3>2.1 Datos proporcionados voluntariamente</h3>
+
+ <p>Cuando te suscribes a nuestro newsletter, completas formularios de contacto o interactúas con nuestros servicios, podemos recopilar:</p>
+
+ <ul>
+ <li>Nombre y apellidos</li>
+ <li>Dirección de correo electrónico</li>
+ <li>Información de consulta o mensaje (formulario de contacto)</li>
+ </ul>
+
+ <h3>2.2 Datos recopilados automáticamente</h3>
+
+ <p>Cuando navegas por nuestro sitio, recopilamos automáticamente:</p>
+
+ <ul>
+ <li>Dirección IP</li>
+ <li>Tipo de navegador y dispositivo</li>
+ <li>Páginas visitadas y tiempo de permanencia</li>
+ <li>Fuente de referencia (cómo llegaste a nuestro sitio)</li>
+ <li>Ubicación geográfica aproximada (país/ciudad)</li>
+ </ul>
+
+ <h2>3. Finalidad del Tratamiento de Datos</h2>
+
+ <p>Utilizamos tus datos personales para:</p>
+
+ <ul>
+ <li>Enviar nuestro newsletter con contenido sobre IA y automatización de negocios</li>
+ <li>Responder consultas enviadas a través del formulario de contacto</li>
+ <li>Mejorar la experiencia de usuario en nuestro sitio web</li>
+ <li>Analizar estadísticas de tráfico y comportamiento de navegación (Google Analytics)</li>
+ <li>Mostrar publicidad personalizada a través de Google AdSense</li>
+ <li>Cumplir con obligaciones legales</li>
+ </ul>
+
+ <h2>4. Base Jurídica del Tratamiento</h2>
+
+ <p>El tratamiento de tus datos se basa en:</p>
+
+ <ul>
+ <li><strong>Consentimiento:</strong> Al suscribirte al newsletter o enviar un formulario de contacto, nos das tu consentimiento explícito para procesar tus datos.</li>
+ <li><strong>Interés legítimo:</strong> Para analizar el tráfico web y mejorar nuestros servicios mediante herramientas como Google Analytics.</li>
+ <li><strong>Cumplimiento legal:</strong> Cuando la ley nos obligue a conservar o procesar ciertos datos.</li>
+ </ul>
+
+ <h2>5. Destinatarios de los Datos</h2>
+
+ <p>Tus datos pueden ser compartidos con:</p>
+
+ <ul>
+ <li><strong>Google Analytics:</strong> Para análisis de tráfico web (datos anonimizados).</li>
+ <li><strong>Google AdSense:</strong> Para mostrar publicidad personalizada basada en tu navegación.</li>
+ <li><strong>Servicios de email marketing:</strong> Si utilizamos plataformas como Mailchimp, Sendinblue u otras para gestionar suscripciones (datos cifrados y protegidos según RGPD).</li>
+ <li><strong>Proveedores de hosting:</strong> Para alojar el sitio web de forma segura.</li>
+ </ul>
+
+ <p>Todos estos terceros están obligados a cumplir con el RGPD y tratarán tus datos únicamente según nuestras instrucciones.</p>
+
+ <h2>6. Transferencias Internacionales de Datos</h2>
+
+ <p>Algunos de nuestros proveedores (como Google) pueden transferir datos fuera del Espacio Económico Europeo (EEE). Estas transferencias se realizan bajo:</p>
+
+ <ul>
+ <li>Cláusulas contractuales tipo aprobadas por la Comisión Europea.</li>
+ <li>Certificaciones de privacidad como el Marco de Privacidad de Datos UE-EE.UU. (EU-U.S. Data Privacy Framework).</li>
+ </ul>
+
+ <h2>7. Conservación de Datos</h2>
+
+ <p>Conservaremos tus datos personales:</p>
+
+ <ul>
+ <li><strong>Newsletter:</strong> Hasta que canceles tu suscripción.</li>
+ <li><strong>Formularios de contacto:</strong> Durante 2 años desde el último contacto, salvo que solicites su eliminación antes.</li>
+ <li><strong>Datos de navegación (Analytics):</strong> Hasta 26 meses desde tu última visita (según políticas de Google Analytics).</li>
+ </ul>
+
+ <p>Pasado este plazo, eliminaremos o anonimizaremos tus datos, salvo que debamos conservarlos por obligación legal.</p>
+
+ <h2>8. Tus Derechos</h2>
+
+ <p>Según el RGPD, tienes derecho a:</p>
+
+ <ul>
+ <li><strong>Acceso:</strong> Solicitar una copia de tus datos personales.</li>
+ <li><strong>Rectificación:</strong> Corregir datos inexactos o incompletos.</li>
+ <li><strong>Supresión ("derecho al olvido"):</strong> Solicitar la eliminación de tus datos cuando ya no sean necesarios.</li>
+ <li><strong>Oposición:</strong> Oponerte al tratamiento de tus datos para fines de marketing directo o publicidad.</li>
+ <li><strong>Limitación:</strong> Solicitar la restricción del tratamiento de tus datos en determinadas circunstancias.</li>
+ <li><strong>Portabilidad:</strong> Recibir tus datos en formato estructurado y transferirlos a otro responsable.</li>
+ <li><strong>Retirar el consentimiento:</strong> En cualquier momento, sin que esto afecte a la licitud del tratamiento previo.</li>
+ </ul>
+
+ <p>Para ejercer estos derechos, envía un email a <strong>contacto@ianegocios.lat</strong> con el asunto "Ejercicio de derechos RGPD" e indica claramente qué derecho deseas ejercer.</p>
+
+ <h2>9. Cookies y Tecnologías Similares</h2>
+
+ <p>Utilizamos cookies propias y de terceros para:</p>
+
+ <ul>
+ <li>Análisis de tráfico (Google Analytics)</li>
+ <li>Publicidad personalizada (Google AdSense)</li>
+ <li>Mejorar la funcionalidad del sitio web</li>
+ </ul>
+
+ <p>Puedes configurar tu navegador para rechazar cookies, aunque esto puede afectar la funcionalidad del sitio. Para más información, consulta nuestra política de cookies (si aplicable).</p>
+
+ <h2>10. Seguridad de los Datos</h2>
+
+ <p>Implementamos medidas técnicas y organizativas adecuadas para proteger tus datos personales contra acceso no autorizado, pérdida, destrucción o alteración, incluyendo:</p>
+
+ <ul>
+ <li>Cifrado SSL/TLS en todas las comunicaciones</li>
+ <li>Acceso restringido a datos personales solo para personal autorizado</li>
+ <li>Copias de seguridad regulares</li>
+ <li>Auditorías de seguridad periódicas</li>
+ </ul>
+
+ <h2>11. Menores de Edad</h2>
+
+ <p>Nuestro sitio web está dirigido a mayores de 18 años. No recopilamos intencionadamente datos de menores de 18 años. Si detectamos que hemos recibido datos de un menor sin el consentimiento de sus padres o tutores, eliminaremos dicha información de inmediato.</p>
+
+ <h2>12. Reclamaciones</h2>
+
+ <p>Si consideras que el tratamiento de tus datos personales vulnera el RGPD, tienes derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>:</p>
+
+ <p><strong>Web:</strong> <a href="https://www.aepd.es" style="color: var(--accent); text-decoration: underline;" target="_blank">www.aepd.es</a><br>
+ <strong>Dirección:</strong> C/ Jorge Juan, 6, 28001 Madrid, España<br>
+ <strong>Teléfono:</strong> +34 901 100 099 / +34 912 663 517</p>
+
+ <h2>13. Modificaciones de esta Política</h2>
+
+ <p>Nos reservamos el derecho a modificar esta Política de Privacidad en cualquier momento. Cualquier cambio será publicado en esta página con la nueva fecha de "Última actualización". Te recomendamos revisar esta política periódicamente.</p>
+
+ <h2>14. Contacto</h2>
+
+ <p>Si tienes dudas sobre esta Política de Privacidad o sobre cómo tratamos tus datos, puedes contactarnos en:</p>
+
+ <p><strong>Email:</strong> contacto@ianegocios.lat<br>
+ <strong>Formulario de contacto:</strong> <a href="contacto.html" style="color: var(--accent); text-decoration: underline;">ianegocios.lat/contacto.html</a></p>
+
+</div>
+
+<footer>
+ <p>© 2026 ianegocios.lat — Todos los derechos reservados</p>
+ <ul class="footer-links">
+ <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+ <li><a href="contacto.html">Contacto</a></li>
+ <li><a href="politica-privacidad.html">Privacidad</a></li>
+ <li><a href="aviso-legal.html">Aviso Legal</a></li>
+ </ul>
+</footer>
+
+</body>
+</html>
